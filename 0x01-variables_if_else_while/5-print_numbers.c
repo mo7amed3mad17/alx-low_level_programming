@@ -1,8 +1,8 @@
 #include <stdio.h>
 /**
   *main - Entry Point
-  *Description: numbers
-  *return: 0
+  *Description: numbers to 9
+  *Return: 0
 */
 int main(void)
 {
