@@ -5,7 +5,6 @@
  * @a: first integer
  * @b: second integer
  * @c: third integer
- *Description: hfbbf
  * Return: largest number
  */
 
