@@ -2,6 +2,7 @@
 #include <stdio.h>
 /**
   *print_number - used func
+  *@n: to prints
   *Return: void
  */
 void print_number(int n)
