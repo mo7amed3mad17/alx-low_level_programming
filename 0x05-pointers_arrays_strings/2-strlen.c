@@ -1,7 +1,7 @@
 #include "main.h"
 /**
   *_strlen - The used func
-  *@s: input
+  *@str: input
   *Return: int
   */
 int _strlen(char *str)
