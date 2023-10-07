@@ -10,9 +10,9 @@ void *malloc_checked(unsigned int b)
 {
 	void *ptr;
 
-	if (b >= INT_MAX)
-		exit(98);
-	else
 	ptr = malloc(b);
+	if (b >= INT_MAX || ptr == NULL)
+		exit(98);
+
 	return (ptr);
 }
