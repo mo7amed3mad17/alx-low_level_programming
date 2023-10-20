@@ -1,20 +1,19 @@
 #include "lists.h"
-
 /**
 * _strlen - len of str
-* @l : char
+* @c : char
 * Return: n
 */
 
-int _strlen(const char *l)
+int _strlen(const char *c)
 {
-	int n = 0;
+	int n;
 
-	while (l[n] != '\0')
+	for (n = 0; c[n] != '\0';)
 	{
 		n++;
 	}
-	return (n);
+		return (n);
 }
 
 /**
@@ -23,6 +22,7 @@ int _strlen(const char *l)
 * @str: value of element
 * Return: number of nodes
 */
+
 list_t *add_node(list_t **head, const char *str)
 {
 	list_t *add;

@@ -5,6 +5,9 @@
 #include <stdlib.h>
 #include <string.h>
 
+int _strlen(const char *c);
+
+
 /**
  * struct list_s - singly linked list
  * @str: string - (malloc'ed string)

@@ -1,62 +1,62 @@
 #include "lists.h"
 /**
  * _strlen - len of str
- * @l : char
+ * @c : char
  * Return: n
 */
 
-int _strlen(const char *l)
+int _strlen(const char *c)
 {
-	int n = 0;
+	int n;
 
-	while (l[n] != '\0')
+	for (n = 0 ; c[n] != '\0';)
 	{
 		n++;
 	}
-	return (n);
+		return (n);
 }
 
 /**
-* add_node_end - adds a new node to the end of linked list
-* @head: double pointer to a linked list
-* @str: string to add to the new node
+* add_node_end - The function to be build
+* @head: linked list
+* @str: value of node
 *
 * Return: pointer to the new node
 */
 list_t *add_node_end(list_t **head, const char *str)
 {
-	list_t *new, *tmp;
+	list_t *n, *extra;
 
 	if (str == NULL)
 	return (NULL);
 
-	new = malloc(sizeof(list_t));
+	n = malloc(sizeof(list_t));
 
-	if (new == NULL)
+	if (n == NULL)
 	return (NULL);
 
-	new->str = strdup(str);
+	n->str = strdup(str);
 
-	if (new->str == NULL)
+	if (n->str == NULL)
 	{
-		free(new);
+		free(n);
 		return (NULL);
 	}
 
-	new->len = _strlen(new->str);
-	new->next = NULL;
+	n->len = _strlen(n->str);
+	n->next = NULL;
 
 	if (*head == NULL)
 	{
-		*head = new;
-		return (new);
+		*head = n;
+		return (n);
 	}
-		tmp = *head;
+		extra = *head;
 
-	while (tmp->next)
-	tmp = tmp->next;
+	while (extra->next)
+	extra = extra->next;
 
-	tmp->next = new;
+	extra->next = n;
 
-	return (new);
+	return (n);
 }
