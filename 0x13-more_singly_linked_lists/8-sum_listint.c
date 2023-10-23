@@ -1,6 +1,6 @@
 #include "lists.h"
 /**
-  * sum_listint - The function to be built 
+  * sum_listint - The function to be built
   * @head: The first node
   * Return: int
 */
