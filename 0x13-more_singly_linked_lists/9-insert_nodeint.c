@@ -13,7 +13,7 @@ listint_t *insert_nodeint_at_index(listint_t **head,
 	listint_t *ptr = *head;
 	listint_t *Nptr = malloc(sizeof(listint_t));
 
-	if (!(head || Nptr))
+	if (!head || !Nptr)
 	return (NULL);
 
 	Nptr->n = n;
