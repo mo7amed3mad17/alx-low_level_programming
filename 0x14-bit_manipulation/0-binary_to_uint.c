@@ -10,7 +10,7 @@ unsigned int binary_to_uint(const char *b)
 {
 	int i;
 	int length = strlen(b);
-	unsigned int n = 0;
+	unsigned long int n = 0;
 
 	if (!b)
 	return (0);
@@ -26,9 +26,8 @@ unsigned int binary_to_uint(const char *b)
 	{
 		if (b[i] == '1')
 		{
-			n += pow(2, length - 1 - i);
+			n += _pow(2, length - 1 - i);
 		}
-
 	}
 	return (n);
 }
