@@ -9,7 +9,6 @@
 unsigned int binary_to_uint(const char *b)
 {
 	int i;
-	int length = _strlen(b);
 	unsigned long int n = 0;
 
 	if (!b)
@@ -21,7 +20,15 @@ unsigned int binary_to_uint(const char *b)
 		return (0);
 	}
 
+	for (i = 0; b[i] != '\0'; i++)
+	{
+		n <<= 1;
 
+		if (b[i] == '1')
+		n += 1;
+	}
+
+/*
 	for (i = length - 1; i >= 0; i--)
 	{
 		if (b[i] == '1')
@@ -29,5 +36,6 @@ unsigned int binary_to_uint(const char *b)
 			n += _pow(2, length - 1 - i);
 		}
 	}
+*/
 	return (n);
 }
