@@ -29,13 +29,13 @@ unsigned int binary_to_uint(const char *b)
 	}
 
 /*
-	for (i = length - 1; i >= 0; i--)
-	{
-		if (b[i] == '1')
-		{
-			n += _pow(2, length - 1 - i);
-		}
-	}
+	*for (i = length - 1; i >= 0; i--)
+	*{
+	*	if (b[i] == '1')
+	*	{
+	*		n += _pow(2, length - 1 - i);
+	*	}
+	*}
 */
 	return (n);
 }
