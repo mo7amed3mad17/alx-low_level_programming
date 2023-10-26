@@ -10,11 +10,10 @@
 unsigned long int _pow(unsigned int base, unsigned int power)
 {
 	unsigned int i;
-	unsigned long int n;
+	unsigned long int n = 1;
 
-	n = 1;
 	for (i = 1; i <= power; i++)
-		n *= base;
+	n = n * base;
 
 	return (n);
 }

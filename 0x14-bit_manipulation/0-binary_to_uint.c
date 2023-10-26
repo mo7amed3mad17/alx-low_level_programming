@@ -16,30 +16,12 @@ unsigned int binary_to_uint(const char *b)
 
 	for (i = 0; b[i] != '\0'; i++)
 	{
-		if (b[i] != '0' && b[i] != '1')
+		if (b[i] != 48 && b[i] != 49)
 		return (0);
 	}
 
-	while (*b)
-	n = n * 2 + (*b++ - '0');
-/*
-*	for (i = 0; b[i] != '\0'; i++)
-*	{
-*		n = n << 1;
-*
-*		if (b[i] == '1')
-*		n = n + 1;
-*	}
-*/
+	for (i = 0 ; b[i] != '\0'; i++)
+	n = n * 2 + (b[i] - 48);
 
-/*
-	*for (i = length - 1; i >= 0; i--)
-	*{
-	*	if (b[i] == '1')
-	*	{
-	*		n += _pow(2, length - 1 - i);
-	*	}
-	*}
-*/
 	return (n);
 }
