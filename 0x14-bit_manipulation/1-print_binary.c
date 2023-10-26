@@ -1,18 +1,18 @@
 #include "main.h"
 
 /**
- * _pow - To find (Base ^ power )
+ * powr - To find (Base ^ power )
  * @base: base
- * @power: power
+ * @exp: power
  * Return: value
  */
 
-unsigned long int _pow(unsigned int base, unsigned int power)
+unsigned long int powr(unsigned int base, unsigned int exp)
 {
 	unsigned int i;
 	unsigned long int n = 1;
 
-	for (i = 1; i <= power; i++)
+	for (i = 1; i <= exp; i++)
 	n = n * base;
 
 	return (n);
@@ -28,7 +28,7 @@ void print_binary(unsigned long int n)
 	char s = 0;
 	unsigned long int v, c;
 
-	v = _pow(2, sizeof(unsigned long int) * 8 - 1);
+	v = powr(2, sizeof(unsigned long int) * 8 - 1);
 
 	while (v != 0)
 	{
