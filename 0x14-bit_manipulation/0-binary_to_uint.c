@@ -20,13 +20,17 @@ unsigned int binary_to_uint(const char *b)
 		return (0);
 	}
 
-	for (i = 0; b[i] != '\0'; i++)
-	{
-		n <<= 1;
-
-		if (b[i] == '1')
-		n += 1;
-	}
+	while (*b)
+	n = n * 2 + (*b++ - '0');
+/*
+*	for (i = 0; b[i] != '\0'; i++)
+*	{
+*		n = n << 1;
+*
+*		if (b[i] == '1')
+*		n = n + 1;
+*	}
+*/
 
 /*
 	*for (i = length - 1; i >= 0; i--)
