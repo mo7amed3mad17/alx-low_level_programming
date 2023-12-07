@@ -1,6 +1,6 @@
 #include "lists.h"
 /**
-  * add_dnodeint_end - The function to be built
+  * add_dnodeint_end - The function to be built (At end)
   * @head: head of the list
   * @n: data to be added
   * Return: head of new list
